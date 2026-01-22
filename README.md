@@ -1,20 +1,33 @@
-## Social Media Sentiment Analysis Pipeline
+# Social Media Sentiment Analysis Pipeline
 
-### Overview
-This project collects Twitter data using Twitter API v2 and performs sentiment analysis
-using NLP techniques and a Naive Bayes classifier.
+## Overview
+This project performs sentiment analysis on Twitter data using Natural Language Processing and Machine Learning.
 
-### Technologies
-Python, Tweepy, NLTK, Pandas, Scikit-learn
+## Technologies Used
+- Python
+- Pandas
+- NLTK
+- Scikit-learn
+- Tweepy (optional for live data)
 
-### Workflow
-1. Data collection using Tweepy Client (API v2)
+## Dataset
+- twitter_training.csv
+- twitter_validation.csv
+
+## Pipeline Steps
+1. Data collection (CSV / Tweepy)
 2. Text preprocessing (cleaning, tokenization, stopword removal, stemming)
-3. Sentiment labeling and model training
-4. Model evaluation using accuracy and confusion matrix
+3. Feature extraction using Bag of Words
+4. Model training using Naive Bayes
+5. Model evaluation using accuracy and confusion matrix
 
-### Challenges
-Twitter API access limitations were handled by migrating to API v2.
+## Results
+- Model Accuracy: **78%**
+- Evaluated using confusion matrix and classification report
 
-### Results
-Achieved ~70–80% accuracy on test data.
+## Sample Prediction
+"I love this game" → Positive  
+"This update is terrible" → Negative
+
+## Conclusion
+Naive Bayes performs well for baseline sentiment analysis and can be improved using TF-IDF or deep learning models.
